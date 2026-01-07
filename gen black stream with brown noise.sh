@@ -1,0 +1,1 @@
+ffmpeg -f lavfi -re -i "color=c=black:s=1280x720:r=25" -f lavfi -re -i "anoisesrc=color=brown:amplitude=0.3" -c:v libx264 -preset veryfast -tune zerolatency -c:a aac -ar 48000 -ac 2 -f rtsp -rtsp_transport tcp rtsp://192.168.111.136:8554/day_camera
